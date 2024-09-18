@@ -28,7 +28,7 @@ function ChatBox() {
     if (status === "unauthenticated") {
       router.push("/login");
     }
-  }, [status, router]);
+  }, [status,session, router]);
 
  const handleSubmit = (e) => {
     e.preventDefault();
@@ -81,7 +81,7 @@ function ChatBox() {
                 Stress Relief Text
               </li>
               <button
-                onClick={() => signOut()}
+                onClick={() => signOut('/')}
                 className="px-3 py-1 bg-red-500 text-white rounded-lg text-sm transition-transform transform hover:scale-95 mt-4"
               >
                 Logout
